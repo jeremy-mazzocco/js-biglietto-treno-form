@@ -5,39 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
-    Nome e cognome: <input type="text" id="input_name">
-    Kilometers: <input type="text" id="input_kilometers">
-    Age: <input type="text" id="input_age">
+    <main>
+        <div class="center">
+            <div class="data">
+                <div class="data-left">
+                    <div>
+                        <label for="input_name">Nome:</label>
+                        <input type="text" id="input_name">
+                    </div>
+                    <div>
+                        <label for="input_kilometers">Kilometers:</label>
+                        <input type="text" id="input_kilometers">
+                    </div>
+                    <div>
+                        <label for="input_age">Age:</label>
+                        <input type="text" id="input_age">
+                    </div>
+                </div>
+                <div class="data-right">
+                    <button id="myBtn">
+                        Calcola
+                    </button>
+                </div>
+            </div>
 
-    <button id="myBtn">
-        Calcola
-    </button>
-
-    <p>
-        Il prezzo del biglietto:
-    </p>
-    <span id="ticket">
-
-    </span>
-    <span>
-        euro
-    </span>
-
-    <p>
-        Nome Passeggero
-    </p>
-    <p id="name">
-
-    </p>
-
-
-
-
-
+            <div class="answer">
+                <div>
+                    <p>
+                        Il prezzo del biglietto:
+                    </p>
+                    <span id="ticket"></span>
+                    <span>
+                        euro
+                    </span>
+                </div>
+                <div>
+                    <p>
+                        Nome Passeggero
+                    </p>
+                    <p id="name"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- JS link -->
     <script src="main.js"></script>
 </body>
 
