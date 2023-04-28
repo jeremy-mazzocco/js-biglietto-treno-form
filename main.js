@@ -9,11 +9,12 @@ const button = document.getElementById("myBtn").addEventListener("click",
         // Salva chilometri e eta' in variabili
         const quantityKilometers = document.getElementById("input_kilometers").value;
         const userAge = document.getElementById("input_age").value;
-        console.log(quantityKilometers, userAge);
+        const userName = document.getElementById("input_name").value;
+        // console.log(quantityKilometers, userAge);
 
         // definisci prezzo biglietto per chilometri da percorrere
         const priceTicket = quantityKilometers * 0.21;
-        console.log(priceTicket);
+        // console.log(priceTicket);
 
 
         // definisci prezzo biglietto in base all'eta
@@ -24,12 +25,14 @@ const button = document.getElementById("myBtn").addEventListener("click",
         } else {
             agePrice = priceTicket;
         }
-        console.log(agePrice)
+        // console.log(agePrice)
 
         // riduci il prezzo in centesimi
-        finalPrice = agePrice.toFixed(2)
+        finalPrice = agePrice.toFixed(2);
+
         // scrivi sull'HTML
         document.getElementById('ticket').innerHTML = finalPrice;
+        document.getElementById('name').innerHTML = userName;
     });
 
 
