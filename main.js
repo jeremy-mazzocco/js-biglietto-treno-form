@@ -1,21 +1,17 @@
 // varibili globali
-let agePrice, finalPrice;
+let agePrice, userAge, userName, quantityKilometers;
 
 
 // al click scrivi ti HTML
-const button = document.getElementById("myBtn").addEventListener("click",
+const button = document.getElementById('myBtn').addEventListener('click',
     function () {
-
         // Salva chilometri e eta' in variabili
-        const quantityKilometers = document.getElementById("input_kilometers").value;
-        const userAge = document.getElementById("input_age").value;
-        const userName = document.getElementById("input_name").value;
-        // console.log(quantityKilometers, userAge);
+        userName = document.getElementById("input_name").value;
+        userAge = document.getElementById("input_age").value;
+        quantityKilometers = document.getElementById("input_kilometers").value;
 
         // definisci prezzo biglietto per chilometri da percorrere
         const priceTicket = quantityKilometers * 0.21;
-        // console.log(priceTicket);
-
 
         // definisci prezzo biglietto in base all'eta
         if (userAge < 18) {
@@ -25,15 +21,25 @@ const button = document.getElementById("myBtn").addEventListener("click",
         } else {
             agePrice = priceTicket;
         }
-        // console.log(agePrice)
 
         // riduci il prezzo in centesimi
-        finalPrice = agePrice.toFixed(2);
+        const finalPrice = agePrice.toFixed(2);
 
         // scrivi sull'HTML
         document.getElementById('ticket').innerHTML = finalPrice;
         document.getElementById('name').innerHTML = userName;
     });
+
+
+// al click cancel data
+const buttonCancel = document.getElementById('myBtn-cancel').addEventListener('click',
+    function () {
+        // scrivi sull'HTML
+        userName = document.getElementById("input_name").value = " ";
+        userAge = document.getElementById("input_age").value = " ";
+        quantityKilometers = document.getElementById("input_kilometers").value = " ";
+    }
+)
 
 
 

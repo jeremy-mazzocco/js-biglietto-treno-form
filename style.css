@@ -52,7 +52,7 @@ main {
     align-items: center;
 }
 
-#myBtn {
+.btn {
     background-color: rgb(100, 60, 162);
     color: white;
     border: none;
